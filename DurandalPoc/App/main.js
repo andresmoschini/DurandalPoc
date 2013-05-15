@@ -22,6 +22,27 @@ define(['durandal/app', 'durandal/viewLocator', 'durandal/system', 'durandal/plu
             router.mapNav('welcome');
             router.mapNav('flickr');
 
+            /*
+            router.mapNav({
+                url: 'users',
+                name: 'Users',
+                moduleId: 'viewmodels/userList'
+            });
+            */
+            router.mapNav('users', 'viewmodels/userList', 'Users');
+
+            //router.mapNav('userDetails');
+            /*
+            router.mapRoute({
+                url: 'users/:id',
+                name: 'User Details',
+                moduleId: 'viewmodels/userDetails'
+                //,visible: false
+            });
+            */
+            router.mapRoute('users/:id', 'viewmodels/userDetails', 'User Details');
+
+
             app.adaptToDevice();
 
             //Show the app by setting the root view model for our application with a transition.
