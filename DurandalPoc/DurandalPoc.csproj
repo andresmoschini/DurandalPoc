@@ -203,11 +203,13 @@
     <Content Include="App\main-built.js" />
     <Content Include="App\main.js" />
     <Content Include="App\services\repository.js" />
+    <Content Include="App\viewmodels\userDetailsBasicInfo.js" />
     <Content Include="App\viewmodels\flickr.js" />
     <Content Include="App\viewmodels\shell.js" />
     <Content Include="App\viewmodels\userDetails.js" />
     <Content Include="App\viewmodels\userList.js" />
     <Content Include="App\viewmodels\welcome.js" />
+    <Content Include="App\views\userDetailsBasicInfo.html" />
     <Content Include="App\views\detail.html" />
     <Content Include="App\views\flickr.html" />
     <Content Include="App\views\shell.html" />

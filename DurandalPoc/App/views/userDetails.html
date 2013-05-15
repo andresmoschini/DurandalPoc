@@ -2,6 +2,7 @@
     <h2 class="page-title" data-bind="text: title"></h2>
     <button data-bind="click: deleteUser">Delete</button>
     <h4>Basic Info</h4>
+    <!--
     <div data-bind="with: user().BasicInfo">
         <button>Edit</button>
         <dl>
@@ -15,6 +16,11 @@
             <dd data-bind="text: Email"></dd>
         </dl>
     </div>
+    -->
+        <div data-bind="compose:'viewmodels/userDetailsBasicInfo'"></div>
+    <!--
+    <div data-bind="compose: { model:user().BasicInfo }"></div>
+    -->
     <h4>Phones</h4>
     <div data-bind="with: user().PhoneList">
         <button>Edit</button>
