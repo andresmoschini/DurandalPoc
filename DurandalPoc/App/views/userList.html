@@ -1,3 +1,8 @@
 ﻿<section>
     <h2 class="page-title" data-bind="text: title"></h2>
+    <ul data-bind="foreach: users">
+        <li>
+            <span data-bind="text: FullName"></span> (<a data-bind="text: Username, attr: { href: '#/users/' + Id }"></a>)
+        </li>
+    </ul>
 </section>

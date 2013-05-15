@@ -1,3 +1,36 @@
 ﻿<section>
     <h2 class="page-title" data-bind="text: title"></h2>
+    <button data-bind="click: deleteUser">Delete</button>
+    <h4>Basic Info</h4>
+    <div data-bind="with: user().BasicInfo">
+        <button>Edit</button>
+        <dl>
+            <dt>Username</dt>
+            <dd data-bind="text: Username"></dd>
+            <dt>FullName</dt>
+            <dd data-bind="text: FullName"></dd>
+            <dt>BirthDate</dt>
+            <dd data-bind="text: BirthDate"></dd>
+            <dt>Email</dt>
+            <dd data-bind="text: Email"></dd>
+        </dl>
+    </div>
+    <h4>Phones</h4>
+    <div data-bind="with: user().PhoneList">
+        <button>Edit</button>
+        <ul data-bind="foreach: List">
+            <li>
+                <dl>
+                    <dt>SmsReady</dt>
+                    <dd data-bind="text: SmsReady"></dd>
+                    <dt>PhoneNumber</dt>
+                    <dd data-bind="text: PhoneNumber"></dd>
+                    <dt>Extension</dt>
+                    <dd data-bind="text: Extension"></dd>
+                    <dt>IsDefault</dt>
+                    <dd data-bind="text: $index() == $parent.DefaultPhoneIndex"></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
 </section>

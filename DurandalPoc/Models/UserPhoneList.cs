@@ -5,9 +5,15 @@ using System.Web;
 
 namespace DurandalPoc.Models
 {
-    public class PhoneList : List<PhoneListItem>
+    public class PhoneList
     {
         public int? DefaultPhoneIndex { get; set; }
+        public List<PhoneListItem> List { get; set; }
+
+        public PhoneList()
+        {
+            List = new List<PhoneListItem>();
+        }
     }
 
     public class PhoneListItem

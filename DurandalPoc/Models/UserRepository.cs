@@ -7,65 +7,84 @@ namespace DurandalPoc.Models
 {
     public class UserRepository
     {
-        private static readonly List<User> DemoData = new List<User>()
+        static UserRepository()
         {
-            new User() 
-            { 
-                Id = new Guid("e3561cff-5dd2-40e3-8314-0c8fdae530f2"),
-                BasicInfo = new UserBasicInfo() 
+            DemoData = new List<User>()
+            {
+                new User()
                 {
-                    Username = "andresmoschini",
-                    Email = "amoschini+demo@makingsense.com",
-                    FullName = "Andrés Moschini",
-                    BirthDate = new DateTime(1978, 12, 2)
-                },
-                PhoneList = new PhoneList() 
-                {
-                    new PhoneListItem() 
+                    Id = new Guid("e3561cff-5dd2-40e3-8314-0c8fdae530f2"),
+                    BasicInfo = new UserBasicInfo()
                     {
-                        PhoneNumber = "3456789012"
-                    }
-                }
-            },
-            new User() 
-            { 
-                Id = new Guid("7b474abd-5b85-4bdb-ba0d-eb00da395106"),
-                BasicInfo = new UserBasicInfo() 
-                {
-                    Username = "jperez",
-                    Email = "demo@demo.com",
-                    FullName = "Juan Perez",
-                    BirthDate = new DateTime(1980, 1, 1)
-                },
-                PhoneList = new PhoneList() 
-                {
-                    new PhoneListItem() 
+                        Username = "andresmoschini",
+                        Email = "amoschini+demo@makingsense.com",
+                        FullName = "Andrés Moschini",
+                        BirthDate = new DateTime(1978, 12, 2)
+                    },
+                    PhoneList = new PhoneList() 
                     {
-                        PhoneNumber = "2345678901",
-                        Extension = "123"
+                        List = new List<PhoneListItem>() 
+                        {
+                            new PhoneListItem() 
+                            {
+                                PhoneNumber = "3456789012"
+                            },
+                            new PhoneListItem() 
+                            {
+                                PhoneNumber = "4567890123"
+                            }
+                        },
+                        DefaultPhoneIndex = 1
                     }
-                }
-            },
-            new User() 
-            { 
-                Id = new Guid("68f262f3-6eed-4b53-a446-bfbcfda83705"),
-                BasicInfo = new UserBasicInfo() 
-                {
-                    Username = "admin",
-                    Email = "admin@demo.com",
-                    FullName = "John Smith",
-                    BirthDate = new DateTime(1980, 1, 1)
                 },
-                PhoneList = new PhoneList() 
-                {
-                    new PhoneListItem() 
+                new User() 
+                { 
+                    Id = new Guid("7b474abd-5b85-4bdb-ba0d-eb00da395106"),
+                    BasicInfo = new UserBasicInfo() 
                     {
-                        PhoneNumber = "1234567890",
-                        SmsReady = true
+                        Username = "jperez",
+                        Email = "demo@demo.com",
+                        FullName = "Juan Perez",
+                        BirthDate = new DateTime(1980, 1, 1)
+                    },
+                    PhoneList = new PhoneList() 
+                    {
+                        List = new List<PhoneListItem>() 
+                        {
+                            new PhoneListItem() 
+                            {
+                                PhoneNumber = "2345678901",
+                                Extension = "123"
+                            }
+                        }
                     }
-                }
-            },
-        };
+                },
+                new User() 
+                { 
+                    Id = new Guid("68f262f3-6eed-4b53-a446-bfbcfda83705"),
+                    BasicInfo = new UserBasicInfo() 
+                    {
+                        Username = "admin",
+                        Email = "admin@demo.com",
+                        FullName = "John Smith",
+                        BirthDate = new DateTime(1980, 1, 1)
+                    },
+                    PhoneList = new PhoneList() 
+                    {
+                        List = new List<PhoneListItem>() 
+                        {
+                            new PhoneListItem() 
+                            {
+                                PhoneNumber = "1234567890",
+                                SmsReady = true
+                            }
+                        }
+                    }
+                },
+            };
+        }
+
+        private static readonly List<User> DemoData;
 
         public IQueryable<UserListItem> List()
         {

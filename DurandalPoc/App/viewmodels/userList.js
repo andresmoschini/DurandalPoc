@@ -1,15 +1,20 @@
-﻿define(['durandal/system', 'durandal/app'], function (system, app) {
+﻿define(['durandal/system', 'durandal/app', 'services/repository'], function (system, app, repository) {
     var vm = {
+        users: ko.observableArray(),
         activate: activate,
+        refresh: refresh,
         title: 'User List View'
     };
 
     return vm;
 
-    //#region Internal Methods
     function activate() {
         system.log(vm.title + ' Activated', null, 'userList', true);
-        return true;
+
+        return repository.getUsers(vm.users);
     }
-    //#endregion
+
+    function refresh() {
+        return repository.getUsers(vm.users, true);
+    }
 });
