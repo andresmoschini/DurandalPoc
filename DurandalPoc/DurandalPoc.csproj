@@ -208,6 +208,7 @@
     <Content Include="App\viewmodels\userDetails.js" />
     <Content Include="App\viewmodels\userList.js" />
     <Content Include="App\viewmodels\welcome.js" />
+    <Content Include="App\views\userDetailsBasicInfo.html" />
     <Content Include="App\views\detail.html" />
     <Content Include="App\views\flickr.html" />
     <Content Include="App\views\shell.html" />
