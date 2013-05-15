@@ -6,6 +6,8 @@
 
 define(['durandal/app', 'durandal/viewLocator', 'durandal/system', 'durandal/plugins/router'],
     function(app, viewLocator, system, router) {
+        //Fix middle-buton click in anchor elements on Firefox (more details: https://github.com/twitter/bootstrap/pull/7899)
+        $(document).off("click.dropdown-menu");
 
         //>>excludeStart("build", true);
         system.debug(true);
