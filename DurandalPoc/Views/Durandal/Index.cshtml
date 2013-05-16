@@ -19,7 +19,10 @@
         <link rel="apple-touch-icon" href="~/Content/images/icon.png"/>
         
         @Styles.Render("~/Content/css")
-        
+
+        <!--[if lt IE 8]>
+            <script src="@Url.Content("~/Scripts/json2.min.js")"></script>
+        <![endif]-->
         <script type="text/javascript">
             if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
                 var msViewportStyle = document.createElement("style");
