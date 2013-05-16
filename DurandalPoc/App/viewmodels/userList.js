@@ -1,4 +1,4 @@
-﻿define(['durandal/system', 'durandal/app', 'services/repository'], function (system, app, repository) {
+﻿define("viewmodels/userList", ['durandal/system', 'durandal/app', 'services/repository'], function (system, app, repository) {
     var vm = {
         users: ko.observableArray(),
         activate: activate,

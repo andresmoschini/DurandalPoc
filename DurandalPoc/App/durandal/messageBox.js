@@ -1,4 +1,4 @@
-﻿define(function() {
+﻿define("durandal/messageBox", function () {
     var MessageBox = function(message, title, options) {
         this.message = message;
         this.title = title || MessageBox.defaultTitle;

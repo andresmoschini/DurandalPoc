@@ -1,4 +1,4 @@
-define(['durandal/system'],
+define('services/repository', ['durandal/system'],
     function (system) {
         var getUsers = function (usersObservable, forceRemote) {
             //TODO: use cache and forceRemote 

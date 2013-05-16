@@ -1,4 +1,4 @@
-﻿define(['./system'], function (system) {
+﻿define("durandal/viewModel", ['./system'], function (system) {
     var viewModel;
 
     function ensureSettings(settings) {

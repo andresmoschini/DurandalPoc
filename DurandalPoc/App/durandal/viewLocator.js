@@ -1,4 +1,4 @@
-﻿define(['./system', './viewEngine'],
+﻿define("durandal/viewLocator", ['./system', './viewEngine'],
     function (system, viewEngine) {
 
     function findInElements(nodes, url) {

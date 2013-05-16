@@ -1,4 +1,4 @@
-﻿define(['durandal/plugins/router', 'durandal/system', 'durandal/app', 'services/repository'], function (router, system, app, repository) {
+﻿define("viewmodels/userDetails", ['durandal/plugins/router', 'durandal/system', 'durandal/app', 'services/repository'], function (router, system, app, repository) {
     var vm = {
         userId: "",
         user: ko.observable(),

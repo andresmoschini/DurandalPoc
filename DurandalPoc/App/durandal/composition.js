@@ -1,4 +1,4 @@
-﻿define(['./viewLocator', './viewModelBinder', './viewEngine', './system', './viewModel'],
+﻿define("durandal/composition", ['./viewLocator', './viewModelBinder', './viewEngine', './system', './viewModel'],
     function (viewLocator, viewModelBinder, viewEngine, system, viewModel) {
 
     var dummyModel = {},

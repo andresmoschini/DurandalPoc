@@ -1,4 +1,4 @@
-﻿define(['./composition', './system', './viewModel'],
+﻿define("durandal/modalDialog", ['./composition', './system', './viewModel'],
     function (composition, system, viewModel) {
 
     var contexts = {},

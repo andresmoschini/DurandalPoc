@@ -1,4 +1,4 @@
-﻿define(['../system'], function(system) {
+﻿define("durandal/transitions/entrance", ['../system'], function (system) {
     var fadeOutDuration = 100;
 
     var entrance = function(parent, newChild, settings) {

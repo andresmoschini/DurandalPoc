@@ -1,4 +1,4 @@
-﻿define(function() {
+﻿define("durandal/http", function () {
     return {
         defaultJSONPCallbackParam:'callback',
         get:function(url, query) {

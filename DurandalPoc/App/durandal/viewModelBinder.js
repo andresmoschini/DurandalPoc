@@ -1,4 +1,4 @@
-﻿define(['./system'], function (system) {
+﻿define("durandal/viewModelBinder", ['./system'], function (system) {
     var viewModelBinder;
     var insufficientInfoMessage = 'Insufficient Information to Bind';
     var unexpectedViewMessage = 'Unexpected View Type';

@@ -1,4 +1,4 @@
-﻿define(['durandal/http', 'durandal/app'], function (http, app) {
+﻿define("viewmodels/flickr", ['durandal/http', 'durandal/app'], function (http, app) {
     
     return {
         displayName: 'Flickr',
